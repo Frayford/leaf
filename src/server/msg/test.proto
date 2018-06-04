@@ -1,0 +1,24 @@
+syntax="proto2";
+package msg;
+
+message LoginMsg {
+    optional string Name = 1;
+	optional string Key = 2;
+    }
+	
+message ChatMsg{
+	optional string Key  = 1;
+	optional string Name = 2;
+	optional string Data = 3;
+	optional bytes photo = 4;	
+}
+
+message RoomData{
+	optional int32 OnlineCount = 1 ;
+	repeated PlayerInfo Players = 2 ;
+}
+
+message PlayerInfo{
+	optional string Name = 1;
+	optional bool online = 2;
+}
